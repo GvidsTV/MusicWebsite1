@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Music Website</title>
+  <style>
+	body {
+  	font-family: Arial, sans-serif;
+  	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
+	}
+
+	header {
+  	height: 100vh;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	text-align: center;
+  	background: #333;
+  	color: #fff;
+	}
+
+	header h1 {
+  	font-size: 2.5em;
+  	margin-bottom: 20px;
+	}
+
+	.slider {
+  	width: 100%;
+  	overflow: hidden;
+	}
+
+	.slides {
+  	display: flex;
+  	transition: transform 0.5s ease-in-out;
+	}
+
+	.slide {
+  	min-width: 100%;
+	}
+
+	section {
+  	padding: 50px;
+  	background: #f4f4f4;
+  	text-align: center;
+	}
+
+	h2 {
+  	color: #333;
+	}
+
+	.media-container {
+  	display: flex;
+  	justify-content: space-around;
+  	flex-wrap: wrap;
+  	margin-top: 20px;
+	}
+
+	.media-item {
+  	width: 30%;
+  	margin-bottom: 20px;
+	}
+
+	.media-item img {
+  	width: 100%;
+  	height: auto;
+	}
+  </style>
+</head>
+<body>
+
+  <header>
+	<h1>Your Music Website</h1>
+	<div class="slider">
+  	<div class="slides">
+    	<div class="slide"><img src="image1.jpg" alt="Slider Image 1"></div>
+    	<div class="slide"><img src="image2.jpg" alt="Slider Image 2"></div>
+    	<div class="slide"><img src="image3.jpg" alt="Slider Image 3"></div>
+  	</div>
+	</div>
+  </header>
+
+  <section>
+	<h2>About Us</h2>
+	<p>This is a brief description of your music website.</p>
+  </section>
+
+  <section>
+	<h2>Music Catalog</h2>
+	<p>List your music catalog or albums here.</p>
+  </section>
+
+  <section>
+	<h2>Trending Media</h2>
+	<div class="media-container">
+  	<div class="media-item"><img src="trending1.jpg" alt="Trending Media 1"></div>
+  	<div class="media-item"><img src="trending2.jpg" alt="Trending Media 2"></div>
+  	<div class="media-item"><img src="trending3.jpg" alt="Trending Media 3"></div>
+	</div>
+  </section>
+
+  <section>
+	<h2>Contact</h2>
+	<p>Provide contact information or a form for users to get in touch.</p>
+  </section>
+
+  <script>
+	// JavaScript for slider functionality
+	const slides = document.querySelector('.slides');
+	let slideIndex = 0;
+
+	function showSlides() {
+  	slideIndex++;
+  	if (slideIndex >= 3) {
+    	slideIndex = 0;
+  	}
+  	slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+  	setTimeout(showSlides, 3000); // Change slide every 3 seconds
+	}
+
+	showSlides();
+  </script>
+
+</body>
+</html>
+
+
